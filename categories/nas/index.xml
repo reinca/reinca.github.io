@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>nas on My Rakugaki for</title>
+    <link>https://www.karkador.net/categories/nas/</link>
+    <description>Recent content in nas on My Rakugaki for</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Sep 2021 14:21:01 +0900</lastBuildDate><atom:link href="https://www.karkador.net/categories/nas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>시놀로지는 NAS인가, 서버인가 (Rev. 1)</title>
+      <link>https://www.karkador.net/post/2nd_hail_synology/</link>
+      <pubDate>Thu, 09 Sep 2021 14:21:01 +0900</pubDate>
+      
+      <guid>https://www.karkador.net/post/2nd_hail_synology/</guid>
+      <description>과분한 능력이 있으면 한계까지 쓰고 싶은게 사람의 마음, 특히 상대가 무기물이라면. 그런데, 이 글은 NAS 밖에서 쓰여있다.</description>
+    </item>
+    
+  </channel>
+</rss>

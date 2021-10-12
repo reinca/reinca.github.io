@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>시놀로지는 NAS인가, 서버인가 (Rev. 1) | My Rakugaki for</title>
+<meta name="keywords" content="shoutout" />
+<meta name="description" content="과분한 능력이 있으면 한계까지 쓰고 싶은게 사람의 마음, 특히 상대가 무기물이라면. 그런데, 이 글은 NAS 밖에서 쓰여있다.">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.karkador.net/post/2nd_hail_synology/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://www.karkador.net/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.karkador.net/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.karkador.net/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.karkador.net/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.karkador.net/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.88.1" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="시놀로지는 NAS인가, 서버인가 (Rev. 1)" />
+<meta property="og:description" content="과분한 능력이 있으면 한계까지 쓰고 싶은게 사람의 마음, 특히 상대가 무기물이라면. 그런데, 이 글은 NAS 밖에서 쓰여있다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.karkador.net/post/2nd_hail_synology/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-09-09T14:21:01&#43;09:00" />
+<meta property="article:modified_time" content="2021-09-09T14:21:01&#43;09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="시놀로지는 NAS인가, 서버인가 (Rev. 1)"/>
+<meta name="twitter:description" content="과분한 능력이 있으면 한계까지 쓰고 싶은게 사람의 마음, 특히 상대가 무기물이라면. 그런데, 이 글은 NAS 밖에서 쓰여있다."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://www.karkador.net/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "시놀로지는 NAS인가, 서버인가 (Rev. 1)",
+      "item": "https://www.karkador.net/post/2nd_hail_synology/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "시놀로지는 NAS인가, 서버인가 (Rev. 1)",
+  "name": "시놀로지는 NAS인가, 서버인가 (Rev. 1)",
+  "description": "과분한 능력이 있으면 한계까지 쓰고 싶은게 사람의 마음, 특히 상대가 무기물이라면. 그런데, 이 글은 NAS 밖에서 쓰여있다.",
+  "keywords": [
+    "shoutout"
+  ],
+  "articleBody": "Hail Synology 시놀로지는 참 기계값을 못하는 서버다. 써보니까 알겠다.\n어디서 알았냐고? 사실은 VMM으로 Windows 10을 얹은 다음 RDP를 써보고야 알았다.\n지독하리만치 명확한 한계를 느꼈다. 그건 OCI로 기능을 옮긴 지금에서도 여전하다.\nMind Control 그래도 시놀로지는 돈값을 하는 기계다. 그래픽을 띄워보겠다는 생각만 버린다면 얼마든지 훌륭하다.\n왜냐고? 리눅스를 쓰고 도커를 쓰고, 목적을 가지고 솔루션을 구축하고 그 솔루션의 경량화 오픈소스를 찾아 헤매다보면 알게된다. 아니 알게 되버린거다.\nDS220+ 내가 쓰는 NAS에, 혹은 거기가 아니더라도 내가 무슨짓을 했는지 앞으로 업데이트도 하고 새 글도 쓰고 그래야겠다. 결국 처음 저 글을 올렸던 반년 전의 내 결심은 이뤄지지 못했다.\nDSM 시놀로지의 근본이며 모든 돈값의 원인. 기적적인 편의성은 결국 Xpenology라는 혼종까지 만들어내고 마는데… 나도 안다. 이 NAS를 살 돈으로 ThinkCentre M75q 2세대에 헤놀로지를 붙였다면 미쳐버린 SSD 서버가 탄생했겠지. 랜 포트가 하나 뿐이고, HDD가 하나만 들어가는 문제점만 아니었다면 말이다. 링크 어그리게이션을 제대로 활용못하지만(Asus Blue Cave는 정말 이쁜 공유기이다. 이쁘다. 진짜로.), 그래도 VMM을 쓰면서 로드 밸런싱을 처리해주는 모습을 보면 실효성은 몰라도 안심할 수 있다.\nNginx on Web Station 나는 80과 443을 내 뜻대로 만지지 못하면 신경쇠약이 발작하는 병이 있다. 스택오버플로우에서 80/443을 내 뜻대로 핸들링할 수 있는 단서를 찾아, 시놀로지에서 기본적으로 사용하는 nginx의 포트를 꺾어버렸다. 아 시원해 이게 서버지 ㅋㅋㅋ 근데 OCI로 오면서 NPM을 쓰니까 이건 또 이것대로 신세계네 것참. 결국 내가 직접 보고 고른 오픈소스들 vs 시놀로지 솔루션들 아닐까. …?\nPostgreSQL on DSM DSM은 기본적으로 psql을 사용한다. 버전이 9.3이어서 Gitlab 최신버전을 설치하지 못하는 치명적인 단점이 있긴하지. And so what? 깃랩을 버리면 된다. 배를 버려라! 그 대신 선택한건 Gitea. Github의 설치판인 Gitlab의 경량화인 Gogs의 포크 Gitea. 경량화인 만큼 CI도 Pages도 없지만, 기본에 충실하고 빨라서 좋았다. 내부가 GO로 이루어져있다고는 하는데, 어쨌든 그건 다음에 얘기하자. 암튼. DB는 도커 컨테이너보다 네이티브가 빠르다고 해서 su - postgres로 DB를 만들어주고 유저를 만들어줬다. 이 이상은 성능이 아니라 회선문제, 내 집 인터넷의 문제다. 나중에 이걸 뼈저리게 후회했다. 시스템용 DB는 시스템만 쓰게 냅둬야했다. DSM 업그레이드를 진행하면서 싸-악 밀렸으니까. 뻐킹 자업자득\n그럼 네트워크는? 이것도 좀 길어질 것 같다. 암튼 나는 Freenom구글 도메인과 Cloudflare SSL 사용 중.\n물론 시놀로지 기본 도메인에 대한 SSL도 있긴 하다. 있는데… 어차피 리버스 프록시로 다 해결하다보니 클라우드플레어에 올려둔 CNAME들이 없으면 synology.me로는 내 서비스를 거의 활용할 수 없는게 현실이다. 결국 리버스 프록시를 어떻게 설정하고 응용하냐의 문제였다. 오히려 NAS라면 너무 간단한 도메인은 독이 아닐까? 라는 생각도 하기 시작했다.\n이번에는 OCI를 기반으로 얘기를 해볼까 (이번 = 지금 당장은 아님) 아직 미정. OCI나 Conoha기반으로 무료 혹은 저렴이 구성을 짠 Adguard + Wireguard 서버 돌리는 글이나 하나 써볼까. 스냅 위에 도커 위에 도커컴포즈 위에 포테이너 위에 NPM이 올라가는것부터 쭉.\n",
+  "wordCount" : "396",
+  "inLanguage": "en",
+  "datePublished": "2021-09-09T14:21:01+09:00",
+  "dateModified": "2021-09-09T14:21:01+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.karkador.net/post/2nd_hail_synology/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Rakugaki for",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.karkador.net/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.karkador.net/" accesskey="h" title="My Rakugaki for (Alt + H)">My Rakugaki for</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.karkador.net/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.karkador.net/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.karkador.net/" title="home">
+                    <span>home</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      시놀로지는 NAS인가, 서버인가 (Rev. 1)<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
+    </h1>
+    <div class="post-description">
+      과분한 능력이 있으면 한계까지 쓰고 싶은게 사람의 마음, 특히 상대가 무기물이라면. 그런데, 이 글은 NAS 밖에서 쓰여있다.
+    </div>
+    <div class="post-meta">September 9, 2021
+</div>
+  </header> 
+  <div class="post-content"><h1 id="hail-synology">Hail Synology<a hidden class="anchor" aria-hidden="true" href="#hail-synology">#</a></h1>
+<p>시놀로지는 참 기계값을 못하는 서버다. 써보니까 알겠다.<br>
+어디서 알았냐고? 사실은 VMM으로 Windows 10을 얹은 다음 RDP를 써보고야 알았다.<br>
+지독하리만치 명확한 한계를 느꼈다. 그건 OCI로 기능을 옮긴 지금에서도 여전하다.</p>
+<h2 id="mind-control">Mind Control<a hidden class="anchor" aria-hidden="true" href="#mind-control">#</a></h2>
+<p>그래도 시놀로지는 돈값을 하는 기계다. 그래픽을 띄워보겠다는 생각만 버린다면 얼마든지 훌륭하다.<br>
+왜냐고? 리눅스를 쓰고 도커를 쓰고, 목적을 가지고 솔루션을 구축하고 그 솔루션의 경량화 오픈소스를 찾아 헤매다보면 알게된다. 아니 알게 되버린거다.</p>
+<h2 id="ds220">DS220+<a hidden class="anchor" aria-hidden="true" href="#ds220">#</a></h2>
+<p>내가 쓰는 NAS에, 혹은 거기가 아니더라도 내가 무슨짓을 했는지 앞으로 업데이트도 하고 새 글도 쓰고 그래야겠다. 결국 처음 저 글을 올렸던 반년 전의 내 결심은 이뤄지지 못했다.</p>
+<h3 id="dsm">DSM<a hidden class="anchor" aria-hidden="true" href="#dsm">#</a></h3>
+<p>시놀로지의 근본이며 모든 돈값의 원인. 기적적인 편의성은 결국 Xpenology라는 혼종까지 만들어내고 마는데&hellip; 나도 안다. 이 NAS를 살 돈으로 ThinkCentre M75q 2세대에 헤놀로지를 붙였다면 미쳐버린 SSD 서버가 탄생했겠지. 랜 포트가 하나 뿐이고, HDD가 하나만 들어가는 문제점만 아니었다면 말이다. 링크 어그리게이션을 제대로 활용못하지만(Asus Blue Cave는 정말 이쁜 공유기이다. 이쁘다. 진짜로.), 그래도 VMM을 쓰면서 로드 밸런싱을 처리해주는 모습을 보면 실효성은 몰라도 안심할 수 있다.</p>
+<h3 id="nginx-on-web-station">Nginx on Web Station<a hidden class="anchor" aria-hidden="true" href="#nginx-on-web-station">#</a></h3>
+<p>나는 80과 443을 내 뜻대로 만지지 못하면 신경쇠약이 발작하는 병이 있다. 스택오버플로우에서 80/443을 내 뜻대로 핸들링할 수 있는 단서를 찾아, 시놀로지에서 기본적으로 사용하는 nginx의 포트를 꺾어버렸다. 아 시원해 이게 서버지 ㅋㅋㅋ 근데 OCI로 오면서 NPM을 쓰니까 이건 또 이것대로 신세계네 것참. 결국 내가 직접 보고 고른 오픈소스들 vs 시놀로지 솔루션들 아닐까. &hellip;?</p>
+<h3 id="postgresql-on-dsm">PostgreSQL on DSM<a hidden class="anchor" aria-hidden="true" href="#postgresql-on-dsm">#</a></h3>
+<p>DSM은 기본적으로 psql을 사용한다. 버전이 9.3이어서 Gitlab 최신버전을 설치하지 못하는 치명적인 단점이 있긴하지. And so what? 깃랩을 버리면 된다. 배를 버려라! 그 대신 선택한건 Gitea. Github의 설치판인 Gitlab의 경량화인 Gogs의 포크 Gitea. 경량화인 만큼 CI도 Pages도 없지만, 기본에 충실하고 빨라서 좋았다. 내부가 GO로 이루어져있다고는 하는데, 어쨌든 그건 다음에 얘기하자. 암튼. DB는 도커 컨테이너보다 네이티브가 빠르다고 해서 su - postgres로 DB를 만들어주고 유저를 만들어줬다. 이 이상은 성능이 아니라 회선문제, 내 집 인터넷의 문제다. 나중에 이걸 뼈저리게 후회했다. 시스템용 DB는 시스템만 쓰게 냅둬야했다. DSM 업그레이드를 진행하면서 싸-악 밀렸으니까. 뻐킹 자업자득</p>
+<h3 id="그럼-네트워크는">그럼 네트워크는?<a hidden class="anchor" aria-hidden="true" href="#그럼-네트워크는">#</a></h3>
+<p>이것도 좀 길어질 것 같다. 암튼 나는 <del>Freenom</del>구글 도메인<del>과 Cloudflare SSL</del> 사용 중.<br>
+<del>물론 시놀로지 기본 도메인에 대한 SSL도 있긴 하다. 있는데&hellip; 어차피 리버스 프록시로 다 해결하다보니 클라우드플레어에 올려둔 CNAME들이 없으면 synology.me로는 내 서비스를 거의 활용할 수 없는게 현실이다.</del>
+결국 리버스 프록시를 어떻게 설정하고 응용하냐의 문제였다. 오히려 NAS라면 너무 간단한 도메인은 독이 아닐까? 라는 생각도 하기 시작했다.</p>
+<h1 id="이번에는-oci를-기반으로-얘기를-해볼까-이번--지금-당장은-아님">이번에는 OCI를 기반으로 얘기를 해볼까 (이번 = 지금 당장은 아님)<a hidden class="anchor" aria-hidden="true" href="#이번에는-oci를-기반으로-얘기를-해볼까-이번--지금-당장은-아님">#</a></h1>
+<p>아직 미정. OCI나 Conoha기반으로 무료 혹은 저렴이 구성을 짠 Adguard + Wireguard 서버 돌리는 글이나 하나 써볼까. 스냅 위에 도커 위에 도커컴포즈 위에 포테이너 위에 NPM이 올라가는것부터 쭉.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.karkador.net/tags/shoutout/">shoutout</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2021 <a href="https://www.karkador.net/">My Rakugaki for</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
